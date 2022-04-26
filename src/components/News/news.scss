@@ -1,0 +1,14 @@
+.news {
+	padding: 0 52px;
+	&__container {
+		display: flex;
+		align-items: center;
+		column-gap: 47px;
+		.top__news {
+			width: 845px;
+		}
+		.latest__news {
+			width: 438px;
+		}
+	}
+}
