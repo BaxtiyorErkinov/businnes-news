@@ -1,7 +1,8 @@
 import React from 'react';
 
-import LatestNews from '../LatestNews/'
-import TopNews from '../TopNews/'
+import LatestNews from '../LatestNews/';
+import TopNews from '../TopNews/';
+import NewsFilter from '../NewsFilter/'
 
 import "./news.scss";
 
@@ -16,6 +17,7 @@ const News = () => {
           <LatestNews />
         </div>
       </div>
+      <NewsFilter />
     </div>
   )
 }
