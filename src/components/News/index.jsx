@@ -3,6 +3,8 @@ import React from 'react';
 import LatestNews from '../LatestNews/';
 import TopNews from '../TopNews/';
 import NewsFilter from '../NewsFilter/'
+import UrgentNews from '../UrgentNews/'
+import OtherNews from '../OtherNews/'
 
 import "./news.scss";
 
@@ -18,6 +20,10 @@ const News = () => {
         </div>
       </div>
       <NewsFilter />
+      <div className="other__news">
+        <UrgentNews />
+        <OtherNews />
+      </div>
     </div>
   )
 }
