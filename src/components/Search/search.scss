@@ -22,7 +22,6 @@
 				input {
 					outline: none;
 					border: none;
-					z-index: 10;
 					width: 100%;
 					font-family: 'Open Sans';
 					font-style: normal;
@@ -30,6 +29,7 @@
 					font-size: 20px;
 					line-height: 27px;
 					color: rgba(0, 0, 0, 0.37);
+					z-index: 100;
 				}
 				img {
 
@@ -44,6 +44,7 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-around;
+					cursor: pointer;
 				&__logo {
 					width: 36px;
 					height: 36px;
@@ -59,6 +60,7 @@
 				}
 			}
 			&__currency {
+					cursor: pointer;
 					width: 230px;
 					height: 64px;
 					background: #FFFFFF;

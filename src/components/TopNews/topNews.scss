@@ -17,6 +17,7 @@
 		background: #FFFFFF;
 		box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
 		border-radius: 35px;
+
 		&__img {
 			min-width: 40%;
 			height: 469px;	
@@ -88,6 +89,7 @@
 						font-weight: 700;
 						font-size: 24px;
 						line-height: 33px;
+						cursor: pointer;
 					}
 				}
 			}

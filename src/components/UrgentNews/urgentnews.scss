@@ -24,6 +24,7 @@
 		.urgent__news__items {
 			.urgent__news__item {
 				margin-bottom: 24px;
+				cursor: pointer;
 				&:last-child {
 					margin-bottom: 0;
 				}
