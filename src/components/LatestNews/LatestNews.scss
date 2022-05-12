@@ -1,47 +1,48 @@
 .latest__news__wrapper {
-	padding-top: 52px;
-	.latest__news__title {
-		font-family: 'Open Sans';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 33px;
-		color: #545557;
-		margin-bottom: 13px;
-	}
-	.latest__news__container {
-		padding: 33px;
-		background: #FFFFFF;
-		border-radius: 35px;
-		.latest__news__items {
-			.latest__news__item {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				column-gap: 15px;
-				margin-bottom: 33px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				&__img {
-					img {
-					border-radius: 35px;
+    padding-top: 52px;
+    .latest__news__title {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: #545557;
+        margin-bottom: 13px;
+    }
+    .latest__news__container {
+        box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
 
-					}
-				}
-				&__content {
-					p {
-					width: 95%;
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 700;
-					font-size: 16px;
-					line-height: 22px;
+        padding: 33px;
+        background: #ffffff;
+        border-radius: 35px;
+        .latest__news__items {
+            .latest__news__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 15px;
+                margin-bottom: 33px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &__img {
+                    img {
+                        border-radius: 35px;
+                    }
+                }
+                &__content {
+                    p {
+                        width: 95%;
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 22px;
 
-					color: #000000;
-					}
-				}
-			}
-		}
-	}
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
 }

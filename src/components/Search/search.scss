@@ -7,6 +7,7 @@
 			display: flex;
 			column-gap: 42px;
 			padding: 0 60px;
+			justify-content: center;
 
 			&__input {
 				width: 773px;
@@ -31,9 +32,6 @@
 					line-height: 27px;
 					color: rgba(0, 0, 0, 0.37);
 				}
-				img {
-
-				}
 			}
 			&__weather {
 					width: 230px;
@@ -45,8 +43,8 @@
 					align-items: center;
 					justify-content: space-around;
 				&__logo {
-					width: 36px;
-					height: 36px;
+					width: 48px;
+					height: 48px;
 				}
 				span {
 					font-family: 'Open Sans';
