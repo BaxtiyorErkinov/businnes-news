@@ -4,18 +4,21 @@
 	box-sizing: border-box;
 	.other__news__items {
 		display: flex;
-		column-gap: 42px;
+		// column-gap: 24px;
+		grid-gap: 24px;
 		flex-wrap: wrap;
+	    justify-content: center;
 		.other__news__item {
-			width: 415px;
+			text-decoration: none;
+			width: 416px;
 			height: 362px;
 			background: #FFFFFF;
-			box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
+			box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
 			border-radius: 19px;
 			display: flex;
 			flex-direction: column;
 			padding: 18px;
-			margin-top: 43px;
+			cursor: pointer;
 			&:nth-child(1) {
 				margin-top: 0;
 			}

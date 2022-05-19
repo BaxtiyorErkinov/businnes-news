@@ -1,47 +1,33 @@
-import React from 'react';
-
-import IMG from '../../assets/images/news/latest.png'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 import './LatestNews.scss';
 
-const news = [
-  {
-    id: 1,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY",
-    img: IMG
-  },
-  {
-    id: 2,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY",
-    img: IMG
-  },
-  {
-    id: 3,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY",
-    img: IMG
-  },
-  {
-    id: 4,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY",
-    img: IMG
-  }
 
-]
 
-const LatestNews = () => {
+const LatestNews = (props) => {
+  const [latestNews, setLatestNews] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("https://businessnews.uz/backend/v1/api/main/latest-news/")
+            .then((res) => {
+                setLatestNews(res.data.slice(0, 4));
+            });
+    }, []);
   return (
     <div className="latest__news__wrapper">
-      <h1 className="latest__news__title">Последние новости</h1>
+      <h1 className="latest__news__title" id="latest__title">{ props.title }</h1>
       <div className="latest__news__container">
         <div className="latest__news__items">
-          { news.map(item => (
+          { latestNews.map(item => (
               <div className="latest__news__item" key={ item.id}>
                 <div className="latest__news__item__img">
-                  <img src={ item.img } alt="" />
+                  <img src={`https://businessnews.uz${item.img}`} width="90" height="90" alt="" />
                 </div>
                 <div className="latest__news__item__content">
                   <p>
-                    { item.content }
+                    { item.desc.slice(0,75) }...
                   </p>
                 </div>
               </div>

@@ -1,17 +1,15 @@
 .urgent__news__wrapper {
+	// margin-left: 34px;
 	.urgent__news__container {
 		width: 415px;
 		background: #FFFFFF;
-		box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
 		border-radius: 19px;
 		padding: 30px;
 		// height: 100%;
 		.urgent__news__title {
 			display: flex;
 			column-gap: 5px;
-			img {
-
-			}
 			span {
 				font-family: 'Open Sans';
 				font-style: normal;
@@ -23,7 +21,8 @@
 		}
 		.urgent__news__items {
 			.urgent__news__item {
-				margin-bottom: 24px;
+				margin-bottom: 19px;
+				cursor: pointer;
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -51,7 +50,6 @@
 						font-weight: 400;
 						font-size: 13px;
 						line-height: 18px;
-
 						color: rgba(0, 0, 0, 0.67);
 					}
 				}

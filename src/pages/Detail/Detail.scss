@@ -1,0 +1,14 @@
+.news__container__detail {
+    margin-top: 106px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 47px;
+    justify-content: center;
+    .top__news {
+        width: 845px;
+    }
+    .latest__news {
+        width: 438px;
+        height: 615px;
+    }
+}

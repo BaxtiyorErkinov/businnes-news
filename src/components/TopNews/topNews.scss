@@ -1,96 +1,98 @@
 .top__news__wrapper {
-	width: 100%;
-	&__title {
-		margin-left: 22px;
-		margin-bottom: 13px;
-		font-family: 'Open Sans';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 33px;
-		color: rgba(60, 61, 63, 0.87);
-	}
-	.main__news {
-		display: flex;
-		column-gap: 24px;
-		padding: 43px;
-		background: #FFFFFF;
-		box-shadow: 0px 4px 14px -4px rgba(0, 0, 0, 0.25);
-		border-radius: 35px;
-		height: 469px;
-		&__img {
-			min-width: 40%;
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}
-		&__content {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-				&__top {				
-				.title {
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 700;
-					font-size: 22px;
-					line-height: 30px;
-					color: #545557;
-					padding: 0 5px;
-
-				}
-				.subtitle {
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 400;
-					font-size: 13px;
-					line-height: 18px;
-					color: rgba(0, 0, 0, 0.67);
-					margin-bottom: 18px;
-					margin-top: 18px;
-					padding: 0 5px;
-				}
-				.subtitle__second {
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 400;
-					font-size: 13px;
-					line-height: 18px;
-					color: rgba(0, 0, 0, 0.67);
-					padding: 0 5px;
-
-				}
-			}
-			&__bottom {
-
-				&__action {
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-end;
-					&__date {
-						font-family: 'Open Sans';
-						font-style: normal;
-						font-weight: 400;
-						font-size: 13px;
-						line-height: 18px;
-						color: rgba(0, 0, 0, 0.67);
-					}
-					&__btn {
-						width: 169px;
-						height: 47px;
-						background: linear-gradient(269.8deg, #77DE13 -62.06%, #BBD80B 168.22%);
-						border-radius: 14px;
-						border: none;
-						color: #fff;
-						font-family: 'Open Sans';
-						font-style: normal;
-						font-weight: 700;
-						font-size: 24px;
-						line-height: 33px;
-					}
-				}
-			}
-		}
-	}
+    width: 100%;
+    &__title {
+        margin-left: 22px;
+        margin-bottom: 13px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: rgba(60, 61, 63, 0.87);
+    }
+    .main__news {
+        display: flex;
+        column-gap: 24px;
+        padding: 43px;
+        background: #ffffff;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+        border-radius: 35px;
+        height: 469px;
+        &__img {
+            min-width: 40%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__top {
+                .title {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: #545557;
+                    padding: 0 5px;
+                }
+                .subtitle {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: rgba(0, 0, 0, 0.67);
+                    margin-bottom: 18px;
+                    margin-top: 18px;
+                    padding: 0 5px;
+                }
+                .subtitle__second {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: rgba(0, 0, 0, 0.67);
+                    padding: 0 5px;
+                }
+            }
+            &__bottom {
+                &__action {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    &__date {
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 18px;
+                        color: rgba(0, 0, 0, 0.67);
+                    }
+                    &__btn {
+                        width: 169px;
+                        height: 47px;
+                        background: linear-gradient(90deg, #54AF3A -44.35%, #81BC4B 53.66%);
+                        border-radius: 14px;
+                        border: none;
+                        color: #fff;
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 33px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
 }

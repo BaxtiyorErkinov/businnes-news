@@ -1,18 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import Header from './components/Header/'
-import Search from './components/Search/'
-import News from './components/News/'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
-import "./App.scss"
+import Detail from "./pages/Detail/";
+import Home from "./pages/Home/Home";
+
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="app__wrapper">
-      <Header />
-      <Search />
-      <News />
-    </div>
+    return (
+      <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
     );
 }
 

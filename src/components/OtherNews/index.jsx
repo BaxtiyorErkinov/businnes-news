@@ -1,49 +1,41 @@
-import React from 'react';
-
-import Img from '../../assets/images/news/mini3.png'
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import "./othernews.scss";
-
-const news = [
-  {
-    id: 1,
-    img: Img,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY"
-  },
-  {
-    id: 2,
-    img: Img,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY"
-  },
-  {
-    id: 3,
-    img: Img,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY"
-  },
-  {
-    id: 4,
-    img: Img,
-    content: "Новый способ пить воду. Фирменный стиль для бренда КЛЮЧ от агентства ENDY"
-  }
-]
+import { Link } from "react-router-dom";
 
 const OtherNews = () => {
-  return (
-    <div className="othernews__container">
-      <div className="other__news__items">
-        { news.map(item => (
-            <div className="other__news__item">
-              <div className="other__news__item__img">
-                <img src={ item.img } alt="" />
-              </div>
-              <div className="other__news__item__content">
-                <p>{item.content}</p>
-              </div>
+    const [local, setLocal] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("https://businessnews.uz/backend/v1/api/main/news-list/1")
+            .then((res) => {
+                setLocal(res.data.slice(0, 4));
+            });
+    }, []);
+
+    return (
+        <div className="othernews__container">
+            <div className="other__news__items">
+                { local ? 
+                local.map((item,key) => (
+                    <Link to={`/detail/${item.id}`} className="other__news__item" key={key}>
+                            <div className="other__news__item__img">
+                                <img
+                                    src={`https://businessnews.uz${item.img}`}
+                                    width="400"
+                                    height="275"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="other__news__item__content">
+                                <p>{item.desc.slice(0,150)}...</p>
+                            </div>
+                    </Link>
+                )) : "" }
             </div>
-          )) }
-      </div>
-    </div>
-  )
-}
+        </div>
+    );
+};
 
 export default OtherNews;
