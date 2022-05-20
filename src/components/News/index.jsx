@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import LatestNews from "../LatestNews/";
 import TopNews from "../TopNews/";
@@ -9,29 +9,28 @@ import { FaAngleRight } from "react-icons/fa";
 import "./news.scss";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Shape from '../../assets/images/news/Shape.svg'
 
 const News = () => {
+    const [mark, setMark] = useState([]);
+    const [keyses, setKeyses] = useState([]);
 
-    const [mark, setMark] = useState([])
-    const [keyses, setKeyses] = useState([])
+    useEffect(() => {
+        axios
+            .get("https://businessnews.uz/backend/v1/api/main/news-list/3/")
 
+            .then((res) => {
+                setMark(res.data.slice(0, 5));
+            });
 
-    useEffect(() => { 
+        axios
+            .get("https://businessnews.uz/backend/v1/api/main/news-list/2/")
 
-        axios.get("https://businessnews.uz/backend/v1/api/main/news-list/3/")
+            .then((res) => {
+                setKeyses(res.data.slice(0, 5));
+            });
+    }, []);
 
-        .then(res => {
-            setMark(res.data.slice(0,5))
-        })
-
-        axios.get("https://businessnews.uz/backend/v1/api/main/news-list/2/")
-
-        .then(res => {
-            setKeyses(res.data.slice(0,5))
-        })
-
-    }, [])
-   
     return (
         <div className="news">
             <div className="news__container">
@@ -102,11 +101,26 @@ const News = () => {
                                                   height="275"
                                                   alt=""
                                               />
+                                              <div className="hashtag">
+                                                  {item.hashtag}
+                                              </div>
                                           </div>
                                           <div className="other__news__item__content">
-                                              <p>
-                                                  {item.desc.slice(0, 150)}...
+                                              <p className="other__news__item__content__title">
+                                                  {item.title}
                                               </p>
+                                              <p className="other__news__item__content__desc">
+                                                  {item.desc.slice(0, 100)}...
+                                              </p>
+                                              <div className="other__news__item__content__info">
+                                                  <span className="date">
+                                                      {item.date_created}
+                                                  </span>
+                                                  <span className="views_count">
+                                                      <img src={Shape} alt="" />
+                                                      {item.view_count}
+                                                  </span>
+                                              </div>
                                           </div>
                                       </Link>
                                   ))
@@ -151,11 +165,26 @@ const News = () => {
                                                   height="275"
                                                   alt=""
                                               />
+                                              <div className="hashtag">
+                                                  {item.hashtag}
+                                              </div>
                                           </div>
                                           <div className="other__news__item__content">
-                                              <p>
-                                                  {item.desc.slice(0, 150)}...
+                                              <p className="other__news__item__content__title">
+                                                  {item.title}
                                               </p>
+                                              <p className="other__news__item__content__desc">
+                                                  {item.desc.slice(0, 100)}...
+                                              </p>
+                                              <div className="other__news__item__content__info">
+                                                  <span className="date">
+                                                      {item.date_created}
+                                                  </span>
+                                                  <span className="views_count">
+                                                      <img src={Shape} alt="" />
+                                                      {item.view_count}
+                                                  </span>
+                                              </div>
                                           </div>
                                       </Link>
                                   ))

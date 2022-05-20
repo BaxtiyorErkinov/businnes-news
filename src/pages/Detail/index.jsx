@@ -6,10 +6,13 @@ import DetailComp from "../../components/DetailComp";
 
 import "./Detail.scss"
 
+import { Helmet } from "react-helmet";
+
 function Detail() {
     console.log("index");
     return (
         <div>
+            
             <Header></Header>
             <div className="news__container__detail">
                 <div className="top__news">

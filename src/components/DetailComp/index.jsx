@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import "./detailcomp.scss";
 
 function DetailComp() {
@@ -19,6 +20,10 @@ function DetailComp() {
     }, []);
     return (
         <div className="detail__wrapper">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{detail.title}</title>
+            </Helmet>
             <div className="detail__container">
                 <img
                     src={`https://businessnews.uz${detail.img}`}
