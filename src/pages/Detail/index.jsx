@@ -6,7 +6,6 @@ import DetailComp from "../../components/DetailComp";
 
 import "./Detail.scss"
 
-import { Helmet } from "react-helmet";
 
 function Detail() {
     console.log("index");
