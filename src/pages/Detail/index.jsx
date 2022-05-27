@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../../components/Header";
 
 import LatestNews from "../../components/LatestNews";
@@ -8,17 +8,18 @@ import "./Detail.scss"
 
 
 function Detail() {
-    console.log("index");
+    const [load, setLoad] = useState(false);
+    
     return (
         <div>
             
             <Header></Header>
             <div className="news__container__detail">
                 <div className="top__news">
-                    <DetailComp />
+                    <DetailComp load={load} setLoad={setLoad} />
                 </div>
                 <div className="latest__news">
-                    <LatestNews />
+                    <LatestNews load={load} setLoad={setLoad} />
                 </div>
             </div>
         </div>

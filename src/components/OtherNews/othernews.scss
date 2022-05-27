@@ -1,111 +1,112 @@
 .othernews__container {
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-	.other__news__items {
-		display: flex;
-		// column-gap: 24px;
-		grid-gap: 24px;
-		flex-wrap: wrap;
-	    justify-content: center;
-		.other__news__item {
-			text-decoration: none;
-			width: 416px;
-			height: 362px;
-			background: #FFFFFF;
-			box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
-			border-radius: 35px;
-			display: flex;
-			flex-direction: column;
-			cursor: pointer;
-			&:nth-child(1) {
-				margin-top: 0;
-			}
-			&:nth-child(2) {
-				margin-top: 0;
-			}
-			&__img {
-				width: 100%;
-				min-height: 200px;
-				border-top-left-radius: 35px;
-				border-top-right-radius: 35px;
-				position: relative;
-				img {
-					border-top-left-radius: 35px;
-					border-top-right-radius: 35px;
-					width: 100%;
-					height: 100%;
-				}
-				.hashtag {
-					height: 40px;
-					background: #FFFFFF;
-					border-radius: 15px;
-					padding: 9px 16px;
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 400;
-					font-size: 16px;
-					line-height: 22px;
-					color: #000000;
-					position: absolute;
-					top: 16px;
-					right: 16px;
-
-				}
-			}
-			&__content {
-				padding-top: 16px;
-				padding: 0 16px;
-				height: 100%;
-				border-bottom-left-radius: 35px;
-				border-bottom-right-radius: 35px;
-				position: relative;
-				&__title {
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 700;
-					font-size: 16px;
-					line-height: 22px;
-					color: #303030;
-					text-transform: capitalize;
-					margin-bottom: 8px;
-				}
-				&__desc {
-					font-family: 'Open Sans';
-					font-style: normal;
-					font-weight: 400;
-					font-size: 14px;
-					line-height: 19px;
-					color: #545454;
-					margin-bottom: 20px;
-				}
-				&__info {
-					display: flex;
-					justify-content: space-between;
-					position: absolute;
-					bottom: 18px;
-					left: 16px;
-					right: 16px;
-					.date {
-						font-family: 'Open Sans';
-						font-style: normal;
-						font-weight: 400;
-						font-size: 14px;
-						line-height: 19px;
-						color: #303030;
-					}
-					.views_count {
-						font-family: 'Open Sans';
-						font-style: normal;
-						font-weight: 400;
-						font-size: 14px;
-						line-height: 19px;
-						color: #303030;
-						display: flex;
-						column-gap: 6px;
-					}
-				}
-			}
-		}
-	}
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    .other__news__items {
+        display: flex;
+        // column-gap: 24px;
+        grid-gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .other__news__item {
+            text-decoration: none;
+            width: 416px;
+            height: 362px;
+            background: #ffffff;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+            border-radius: 35px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+            &__img {
+                width: 100%;
+                min-height: 200px;
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+                position: relative;
+                img {
+                    border-top-left-radius: 35px;
+                    border-top-right-radius: 35px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .hashtag {
+                    height: 40px;
+                    background: #ffffff;
+                    border-radius: 15px;
+                    padding: 9px 16px;
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #000000;
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                    text-decoration: none;
+                }
+            }
+            &__content {
+                padding-top: 16px;
+                padding: 0 16px;
+                height: 100%;
+                border-bottom-left-radius: 35px;
+                border-bottom-right-radius: 35px;
+                position: relative;
+                &__title {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #303030;
+                    text-transform: capitalize;
+                    margin-bottom: 8px;
+                    margin-top: 16px;
+                }
+                &__desc {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #545454;
+                    margin-bottom: 20px;
+                }
+                &__info {
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    bottom: 18px;
+                    left: 16px;
+                    right: 16px;
+                    .date {
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #303030;
+                    }
+                    .views_count {
+                        font-family: "Open Sans";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #303030;
+                        display: flex;
+                        column-gap: 6px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,5 @@
 .latest__news__wrapper {
+    margin-top: 45px !important;
     .latest__news__title {
         position: relative;
         font-family: "Open Sans";
@@ -17,6 +18,7 @@
         border-radius: 35px;
         .latest__news__items {
             .latest__news__item {
+                text-decoration: none;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
